@@ -72,6 +72,9 @@
     text-decoration: none;
     color: #C0C0C0;
     margin-left: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 .container-always_header-nav-ul-li-text_last {
