@@ -94,12 +94,9 @@
 }
 
 .container-box-login {
-    position: absolute;
+    margin-right: 40px;
     text-decoration: none;
-    top: 90px;
-    left: 60px;
     color: #C0C0C0;
-    z-index: 2;
 }
 
 .container-box-main {
@@ -179,6 +176,8 @@
 
 .container-box-main-selct-value {
     border: solid 2px #DEE2E6;
+    border-left: none;
+    border-right: none;
     padding: 10px 10px;
 }
 

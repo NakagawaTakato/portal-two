@@ -8,9 +8,10 @@
 <div class="container">
     <header class="container-always_header">
         <ul class="container-always_header-ul">
-            <li class="container-always_header-li"><a href="/shop_all" class="container-group-text_one">iMPRESS Inc</a></li>
-            <li class="container-always_header-li"><a href="/register" class="container-group-text_two">ホーム</a></li>
-            <li class="container-always_header-li"><a href="/login" class="container-group-text_three">会社情報</a></li>
+            <li class="container-always_header-li"><div class="container-group-text_one">iMPRESS Inc</div></li>
+            <li class="container-always_header-li"><a href="/" class="container-group-text_two">ホーム</a></li>
+            <li class="container-always_header-li"><a href="https://www.imprex.co.jp/product_ifusion
+            " class="container-group-text_three">会社情報</a></li>
             <li class="container-always_header-li"><a href="/login" class="container-group-text_four">お問い合わせ</a></li>
         </ul>
         <nav>
@@ -23,17 +24,16 @@
                         @csrf
                         <input class="container-always_header-nav-ul-form-text" type="submit" value="ログアウト">
                     </form>
-                    <li class="container-always_header-nav-ul-li"></li>
+                    <li class="container-always_header-nav-ul-li"><div class="container-always_header-nav-ul-li-text_last">{{ Auth::user()->name }}</div></li>
                 </ul>
             @else
-
+                <div><a href="/login" class="container-box-login">ログイン</a></div>
             @endif
         </nav>
 
     </header>
 
     <div class="container-box">
-        <div><a href="/login" class="container-box-login">login</a></div>
 
         <main class="container-box-main">
             
