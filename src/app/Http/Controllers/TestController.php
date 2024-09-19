@@ -10,4 +10,9 @@ class TestController extends Controller
     {
         return view('index');
     }
+
+    public function inquiry()
+    {
+        return view('inquiry');
+    }
 }

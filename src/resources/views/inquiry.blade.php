@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('css/index.css') }}">
+<link rel="stylesheet" href="{{ asset('css/inquiry.css') }}">
 @endsection
 
 @section('content')
@@ -11,7 +11,7 @@
             <li class="container-always_header-li"><div class="container-group-text_one">iMPRESS Inc</div></li>
             <li class="container-always_header-li"><a href="/" class="container-group-text_two">ホーム</a></li>
             <li class="container-always_header-li"><a href="https://www.imprex.co.jp/product_ifusion" class="container-group-text_three" target="_blank" rel="noopener noreferrer">会社情報</a></li>
-            <li class="container-always_header-li"><a href="/inquiry" class="container-group-text_four">お問い合わせ</a></li>
+            <li class="container-always_header-li"><a href="/login" class="container-group-text_four">お問い合わせ</a></li>
         </ul>
         <nav>
            @if( Auth::check() )
@@ -36,7 +36,7 @@
 
         <main class="container-box-main">
             
-            <h2 class="container-box-main-h2">iMPRESS AI Portal site</h2>
+            <h2 class="container-box-main-h2"><span class="container-box-main-h2-span">お問い合わせ</span></h2>
             <div class="container-box-main-background"></div>
             
             <div class="container-box-search">
@@ -98,8 +98,5 @@
 
 </div>
 
-<script>
-
-</script>
 @endsection
 

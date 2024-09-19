@@ -16,3 +16,4 @@ use App\Http\Controllers\TestController;
 
 Route::get('/', [TestController::class, 'index']);
 Route::post('/', [TestController::class, 'index']);
+Route::get('/inquiry', [TestController::class, 'inquiry']);
