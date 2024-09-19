@@ -23,7 +23,7 @@
                         @csrf
                         <input class="container-always_header-nav-ul-form-text" type="submit" value="ログアウト">
                     </form>
-                    <li class="container-always_header-nav-ul-li"><a href="/" class="container-always_header-nav-ul-li-text_last">aaa</a></li>
+                    <li class="container-always_header-nav-ul-li"></li>
                 </ul>
             @else
 
