@@ -75,11 +75,11 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+    transition: color 0.3s ease;
 }
 
 .container-always_header-nav-ul-form-text a:hover {
     color: #FFFFFF;
-    transition: color 0.3s ease;
 }
 
 .container-always_header-nav-ul-li-text_last {
