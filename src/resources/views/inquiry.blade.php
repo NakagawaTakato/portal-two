@@ -31,7 +31,7 @@
         </nav>
 
     </header>
-    <form action="confirm" method="post">
+    <form action="/inquiry/confirm" method="post">
         @csrf
         <div class="container-box">
 
