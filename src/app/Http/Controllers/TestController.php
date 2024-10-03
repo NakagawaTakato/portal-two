@@ -15,4 +15,15 @@ class TestController extends Controller
     {
         return view('inquiry');
     }
+
+    public function confirm(ContactRequest $request)
+    {
+        $contacts = $request->all();
+        return view('cofirm', compact('contacts'));
+    }
+
+    public function send()
+    {
+        return view('send');
+    }
 }

@@ -31,65 +31,57 @@
         </nav>
 
     </header>
+    <form action="confirm" method="post">
+        @csrf
+        <div class="container-box">
 
-    <div class="container-box">
+            <main class="container-box-main">
+                
+                <h2 class="container-box-main-h2"><span class="container-box-main-h2-span">お問い合わせ</span></h2>
+                
+                <section class="container-box-main-section_one">
+                    <label class="contact-form__label" for="name">お名前（必須）</label>
+                    <input class="contact-form__input" type="text" name="name" id="name"value="{{ old('name') }}" placeholder="例：山田">
+                    <p class="contact-form__error-message">
+                        @error('name')
+                        {{ $message }}
+                        @enderror
+                    </p>
+                </section>
 
-        <main class="container-box-main">
-            
-            <h2 class="container-box-main-h2"><span class="container-box-main-h2-span">お問い合わせ</span></h2>
-            <div class="container-box-main-background"></div>
-            
-            <div class="container-box-search">
-                <input type="container-box-search-text"></input>
-                <input class="container-box-search-btn" type="submit" value="検索">
-            </div>
+                <section class="container-box-main-section_two">
+                    <label class="contact-form__label" for="email">メールアドレス（必須）</label>
+                    <input class="contact-form__input" type="email" name="email" id="email" value="{{ old('email') }}"
+                    placeholder="例：test@example.com">
+                    <p class="contact-form__error-message">
+                        @error('email')
+                        {{ $message }}
+                        @enderror
+                    </p>
+                </section>
 
-            <section class="container-box-main-section_one">
-                <img class="container-box-main-section-img" src="{{ asset('img/roboimage_last.png') }}" alt="">
-                <h3 class="container-box-main-h3">iMPRESS-AI Chatbot</h3>
-                <p class="container-box-main-text">iMPRESSパッケージユーザー様向けの</br>ユーザーサポートチャットボットです</p>
-            </section>
+                <section class="container-box-main-section_three">
+                    <label class="contact-form__label" for="title">題名（必須）</label>
+                    <input class="contact-form__input" type="text" name="title" id="title" value="{{ old('title') }}"
+                    placeholder="例：千駄ヶ谷マンション101">
+                </section>
 
-            <section class="container-box-main-section_two">
-                <img class="container-box-main-section-img" src="img/roboimage_sub.png" alt="">
-                <h3 class="container-box-main-h3">Chatbot for guest</h3>
-                <p class="container-box-main-text">ゲストユーザー様にiMPRESSの製品情報</br>などを私が詳しくご案内いたします！</p>
-            </section>
+                <section class="container-box-main-section_four">
+                    <label class="contact-form__label" for="detail">メッセージ本文（必須）</label>
+                    <textarea class="contact-form__textarea" name="detail" id="" cols="30" rows="10"
+                    placeholder="お問い合わせ内容をご記載ください">{{ old('detail') }}</textarea>
+                    <p class="contact-form__error-message">
+                        @error('detail')
+                        {{ $message }}
+                        @enderror
+                    </p>
+                </section>
 
-            <section class="container-box-main-section_three">
-                <img class="container-box-main-section-img" src="img/roboimage_sub.png" alt="">
-                <h3 class="container-box-main-h3">Chatbot for guest</h3>
-                <p class="container-box-main-text">ゲストユーザー様にiMPRESSの製品情報</br>などを私が詳しくご案内いたします！</p>
-            </section>
+            </main>
+        </div>
 
-            <section class="container-box-main-section_four">
-                <img class="container-box-main-section-img" src="{{ asset('img/roboimage_last.png') }}" alt="">
-                <h3 class="container-box-main-h3">iMPRESS-AI Chatbot</h3>
-                <p class="container-box-main-text">iMPRESSパッケージユーザー様向けの</br>ユーザーサポートチャットボットです</p>
-            </section>
-
-            <section class="container-box-main-section_five">
-                <img class="container-box-main-section-img" src="img/roboimage_sub.png" alt="">
-                <h3 class="container-box-main-h3">Chatbot for guest</h3>
-                <p class="container-box-main-text">ゲストユーザー様にiMPRESSの製品情報</br>などを私が詳しくご案内いたします！</p>
-            </section>
-
-            <section class="container-box-main-section_six">
-                <img class="container-box-main-section-img" src="img/roboimage_sub.png" alt="">
-                <h3 class="container-box-main-h3">Chatbot for guest</h3>
-                <p class="container-box-main-text">ゲストユーザー様にiMPRESSの製品情報</br>などを私が詳しくご案内いたします！</p>
-            </section>
-
-            <div class="container-box-main-selct">
-                <div class="container-box-main-selct-before">前へ</div>
-                <div class="container-box-main-selct-value">1</div>
-                <div class="container-box-main-selct-next">次へ</div>
-            </div>
-
-        </main>
-
-
-    </div>
+        <input class="contact-form__btn btn" type="submit" value="送信">
+    </form>
 
     <footer class="container-always_footer">
         <p>Copyright &copy; 2024 iMPRESS Inc.</p>
